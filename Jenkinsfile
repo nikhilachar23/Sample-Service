@@ -1,3 +1,5 @@
+@Library('java_pipeline_groovy@main') _
+
 pipeline {
   agent { label 'slave2' }
     stages {
@@ -16,7 +18,8 @@ sh "cd Sample-Service"
     }
            stage('build') {            
             steps {              
-                sh "mvn clean package"
+                //sh "mvn clean package"
+              buildproject()
                   }
         }
           stage('Upload Artifact') {
