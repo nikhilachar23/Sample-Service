@@ -19,7 +19,7 @@ sh "cd Sample-Service"
            stage('build') {            
             steps {              
                 //sh "mvn clean package"
-              buildproject(sample-service)
+              buildproject('sample-service')
                   }
         }
           stage('Upload Artifact') {
